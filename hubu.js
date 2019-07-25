@@ -67,6 +67,18 @@ grd.addColorStop(0.6, "rgb(0, 255, 217)");
 ctx.fillStyle = grd;//把设置好的渐变色给需要做渐变的对象
 ctx.fillRect(200, 300, 200, 80);
 
+//圆渐变
+ctx.beginPath();
+let col = ctx.createRadialGradient(740,100,5,750,110,80);
+col.addColorStop(0, "red");
+col.addColorStop(1, "white");
+ctx.fillStyle = col;
+ctx.fillRect(700, 50, 100, 100);
+
+//导入图片
+let img = document.querySelector('img');
+ctx.drawImage(img, 800, 20);
+
 //制作一个多边形
 ctx.beginPath();
 ctx.translate(550,150);//设置画布中心点
@@ -80,3 +92,5 @@ ctx.closePath();
 ctx.lineWidth=5;
 ctx.fillStyle = "rgb(0, 255, 217)";
 ctx.fill();
+
+
