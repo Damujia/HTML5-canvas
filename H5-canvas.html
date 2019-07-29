@@ -9,11 +9,22 @@
         #can{
             border: 1px solid rgb(94, 255, 0);
         }
+        #vas{
+            border: 1px solid rgb(112, 120, 231);
+        }
     </style>
 </head>
 <body>
     <canvas id="can" width="1100px" height="500px"></canvas>
     <img src="./ahh.jpg" alt="">
+    <canvas id="vas" width="1000px" height="400px"></canvas>
 </body>
 <script src="hubu.js"></script>
+<script src="packaging.js"></script>
+<script>
+    let canr = new cans({
+        id : '#vas'
+    });
+    canr.addEvent();
+</script>
 </html>
